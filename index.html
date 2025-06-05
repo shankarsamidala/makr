@@ -1,406 +1,327 @@
-<html lang="en">
+<html class="scroll-smooth" lang="en">
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>
-   Makrhub - AI-Powered Cloud Solutions
+   Makrhub - AI-powered Cloud Tools Suite
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <style>
-   body {
+   html {
+      scroll-behavior: smooth;
+    }
+    body {
       font-family: 'Inter', sans-serif;
     }
   </style>
  </head>
- <body class="bg-white text-gray-900">
+ <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
   <!-- Header -->
-  <header class="w-full border-b border-gray-200">
-   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
-    <a class="flex items-center space-x-2" href="#">
-     <img alt="Makrhub logo placeholder, blue and white stylized M letter" class="w-10 h-10" height="40" src="https://storage.googleapis.com/a1aa/image/88a53906-0021-462e-6707-c62904ac1d7f.jpg" width="40"/>
-     <span class="text-xl font-bold text-blue-600">
-      Makrhub
-     </span>
+  <header class="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between h-16">
+    <a class="text-2xl font-extrabold tracking-tight text-indigo-600 dark:text-indigo-400 select-none" href="#home">
+     Makrhub
     </a>
-    <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
-     <a class="hover:text-blue-600 transition-colors duration-200" href="#">
+    <nav class="hidden md:flex space-x-8 font-medium text-gray-700 dark:text-gray-300">
+     <a class="hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#home">
       Home
      </a>
-     <a class="hover:text-blue-600 transition-colors duration-200" href="#features">
+     <a class="hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#features">
       Features
      </a>
-     <a class="hover:text-blue-600 transition-colors duration-200" href="#pricing">
-      Pricing
+     <a class="hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#usecases">
+      Use Cases
      </a>
-     <a class="hover:text-blue-600 transition-colors duration-200" href="#about">
+     <a class="hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#about">
       About
      </a>
-     <a class="hover:text-blue-600 transition-colors duration-200" href="#contact">
+     <a class="hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#contact">
       Contact
      </a>
     </nav>
-    <a class="hidden md:inline-block bg-blue-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors duration-200" href="#">
-     Get Started
-    </a>
-    <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600" id="mobile-menu-button">
+    <button aria-label="Toggle menu" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded" id="mobile-menu-button">
      <i class="fas fa-bars fa-lg">
      </i>
     </button>
    </div>
-   <!-- Mobile menu -->
-   <nav class="md:hidden hidden px-4 pb-4 space-y-2 border-t border-gray-200" id="mobile-menu">
-    <a class="block py-2 font-semibold text-gray-700 hover:text-blue-600" href="#">
-     Home
-    </a>
-    <a class="block py-2 font-semibold text-gray-700 hover:text-blue-600" href="#features">
-     Features
-    </a>
-    <a class="block py-2 font-semibold text-gray-700 hover:text-blue-600" href="#pricing">
-     Pricing
-    </a>
-    <a class="block py-2 font-semibold text-gray-700 hover:text-blue-600" href="#about">
-     About
-    </a>
-    <a class="block py-2 font-semibold text-gray-700 hover:text-blue-600" href="#contact">
-     Contact
-    </a>
-    <a class="block mt-2 bg-blue-600 text-white text-center py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors duration-200" href="#">
-     Get Started
-    </a>
+   <nav class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 hidden" id="mobile-menu">
+    <div class="px-6 py-4 space-y-3 font-medium text-gray-700 dark:text-gray-300">
+     <a class="block hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#home">
+      Home
+     </a>
+     <a class="block hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#features">
+      Features
+     </a>
+     <a class="block hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#usecases">
+      Use Cases
+     </a>
+     <a class="block hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#about">
+      About
+     </a>
+     <a class="block hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#contact">
+      Contact
+     </a>
+    </div>
    </nav>
   </header>
-  <!-- Hero Section -->
-  <section aria-label="Hero section with headline, subheadline, buttons and AI cloud computing illustration" class="relative bg-white overflow-hidden">
-   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center md:items-start py-16 md:py-24">
-    <div class="w-full md:w-1/2 text-center md:text-left">
-     <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-700 leading-tight">
-      Empower Your Business with AI-Powered Cloud Solutions
-     </h1>
-     <p class="mt-4 text-lg text-gray-700 max-w-md mx-auto md:mx-0">
-      Makrhub offers smart AI tools and customer service automation across
-          industries.
-     </p>
-     <div class="mt-8 flex justify-center md:justify-start space-x-4">
-      <a class="px-6 py-3 rounded-md border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition" href="#features">
-       Learn More
-      </a>
-      <a class="px-6 py-3 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700 transition" href="#pricing">
-       Try for Free
+  <main class="overflow-x-hidden">
+   <!-- Hero Section -->
+   <section class="relative bg-gradient-to-tr from-indigo-50 via-white to-indigo-50 dark:from-indigo-900 dark:via-gray-900 dark:to-indigo-900" id="home">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 min-h-[calc(100vh-64px)] flex flex-col justify-center">
+     <div class="relative z-10 max-w-3xl text-center mx-auto py-20 sm:py-32">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 leading-tight">
+       Build with AI. Scale with Cloud.
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-xl mx-auto">
+       Makrhub provides ready-to-use AI tools that plug into your business processes — from support to operations.
+      </p>
+      <a class="inline-block mt-10 px-8 py-3 rounded-full bg-indigo-600 text-white font-semibold text-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-400 transition" href="#features">
+       Explore Features
       </a>
      </div>
     </div>
-    <div class="w-full md:w-1/2 mb-10 md:mb-0 flex justify-center">
-     <img alt="Illustration of AI and cloud computing with digital cloud icons, AI brain, and network connections in blue and white colors" class="w-full max-w-md" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/83240471-ca5a-4809-11e8-d8f1fc2d35fa.jpg" width="600"/>
-    </div>
-   </div>
-  </section>
-  <!-- Features Section -->
-  <section aria-label="Features section with four feature blocks" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="features">
-   <h2 class="text-3xl font-extrabold text-blue-700 text-center">
-    Our Features
-   </h2>
-   <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-    <div class="flex flex-col items-center space-y-4 px-4">
-     <div aria-hidden="true" class="text-blue-600 text-5xl flex justify-center items-center">
-      <i class="fas fa-cloud">
-      </i>
-     </div>
-     <h3 class="text-xl font-semibold text-gray-900">
-      AI Cloud Tools
-     </h3>
-     <p class="text-gray-600">
-      Leverage powerful AI-driven cloud tools to optimize your business
-          workflows.
-     </p>
-    </div>
-    <div class="flex flex-col items-center space-y-4 px-4">
-     <div aria-hidden="true" class="text-blue-600 text-5xl flex justify-center items-center">
-      <i class="fas fa-headset">
-      </i>
-     </div>
-     <h3 class="text-xl font-semibold text-gray-900">
-      Customer Service Automation
-     </h3>
-     <p class="text-gray-600">
-      Automate customer interactions with intelligent chatbots and
-          support systems.
-     </p>
-    </div>
-    <div class="flex flex-col items-center space-y-4 px-4">
-     <div aria-hidden="true" class="text-blue-600 text-5xl flex justify-center items-center">
-      <i class="fas fa-cogs">
-      </i>
-     </div>
-     <h3 class="text-xl font-semibold text-gray-900">
-      Customizable AI Models
-     </h3>
-     <p class="text-gray-600">
-      Tailor AI models to fit your unique business needs and industry
-          requirements.
-     </p>
-    </div>
-    <div class="flex flex-col items-center space-y-4 px-4">
-     <div aria-hidden="true" class="text-blue-600 text-5xl flex justify-center items-center">
-      <i class="fas fa-plug">
-      </i>
-     </div>
-     <h3 class="text-xl font-semibold text-gray-900">
-      Seamless Integration
-     </h3>
-     <p class="text-gray-600">
-      Easily integrate our AI solutions with your existing software and
-          platforms.
-     </p>
-    </div>
-   </div>
-  </section>
-  <!-- Pricing Section -->
-  <section aria-label="Pricing plans section with three pricing cards" class="bg-blue-50 py-16 px-4 sm:px-6 lg:px-8" id="pricing">
-   <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-3xl font-extrabold text-blue-700">
-     Flexible Pricing Plans
+    <!-- Abstract cloud/AI shapes as images -->
+    <img alt="Abstract purple cloud shape with soft edges and subtle AI circuit patterns" aria-hidden="true" class="absolute top-10 left-4 w-40 opacity-30 dark:opacity-20 select-none pointer-events-none" draggable="false" height="400" src="https://storage.googleapis.com/a1aa/image/d60316e3-0309-4c6b-0fc7-d7b4abe3613b.jpg" width="600"/>
+    <img alt="Abstract blue AI shape with rounded edges and digital circuit lines" aria-hidden="true" class="absolute bottom-20 right-6 w-48 opacity-30 dark:opacity-20 select-none pointer-events-none" draggable="false" height="300" src="https://storage.googleapis.com/a1aa/image/7242278a-314a-401e-930b-aef30b7807af.jpg" width="500"/>
+    <img alt="Soft purple cloud shape with subtle gradient and AI-inspired design" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 opacity-10 dark:opacity-5 select-none pointer-events-none" draggable="false" height="300" src="https://storage.googleapis.com/a1aa/image/7e75d080-2959-4ebe-8fd6-a4b55bcd7864.jpg" width="300"/>
+   </section>
+   <!-- What Makrhub Does -->
+   <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20" id="features">
+    <h2 class="text-3xl font-extrabold text-center text-gray-900 dark:text-gray-100 mb-12">
+     What Makrhub Does
     </h2>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-     <!-- Basic Plan -->
-     <div class="bg-white rounded-lg shadow-md p-8 flex flex-col justify-between">
-      <div>
-       <h3 class="text-xl font-semibold text-gray-900 mb-4">
-        Basic
-       </h3>
-       <p class="text-4xl font-extrabold text-blue-600 mb-6">
-        $19
-        <span class="text-lg font-normal text-gray-600">
-         /mo
-        </span>
-       </p>
-       <ul class="text-gray-700 space-y-3 mb-8">
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         Access to AI Cloud Tools
-        </li>
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         Basic Customer Service Automation
-        </li>
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         Email Support
-        </li>
-       </ul>
-      </div>
-      <a class="block text-center bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition" href="#">
-       Subscribe
-      </a>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-5xl mx-auto">
+     <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-900 shadow-md hover:shadow-lg transition">
+      <img alt="Icon representing cloud-native AI tools with cloud and AI chip illustration in purple" class="mb-6 w-24 h-24" draggable="false" height="96" src="https://storage.googleapis.com/a1aa/image/4b692cbc-0876-44a1-0598-5b27bd16dd02.jpg" width="96"/>
+      <h3 class="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">
+       Cloud-native AI Tools
+      </h3>
+      <p class="text-gray-700 dark:text-gray-300 max-w-xs">
+       Access modular AI tools built for the cloud, designed to seamlessly integrate and scale with your business.
+      </p>
      </div>
-     <!-- Pro Plan -->
-     <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between border-2 border-blue-600">
-      <div>
-       <h3 class="text-xl font-semibold text-gray-900 mb-4">
-        Pro
-       </h3>
-       <p class="text-4xl font-extrabold text-blue-600 mb-6">
-        $49
-        <span class="text-lg font-normal text-gray-600">
-         /mo
-        </span>
-       </p>
-       <ul class="text-gray-700 space-y-3 mb-8">
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         All Basic Features
-        </li>
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         Advanced Customer Service Automation
-        </li>
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         Customizable AI Models
-        </li>
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         Priority Email &amp; Chat Support
-        </li>
-       </ul>
-      </div>
-      <a class="block text-center bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition" href="#">
-       Subscribe
-      </a>
+     <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-900 shadow-md hover:shadow-lg transition">
+      <img alt="Icon showing plug and play APIs with a plug connecting to a cloud symbol in blue" class="mb-6 w-24 h-24" draggable="false" height="96" src="https://storage.googleapis.com/a1aa/image/a17c5bb5-b1b6-4125-c819-976150ada2c1.jpg" width="96"/>
+      <h3 class="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">
+       Plug-and-play APIs
+      </h3>
+      <p class="text-gray-700 dark:text-gray-300 max-w-xs">
+       Easily connect Makrhub’s APIs to your existing systems for instant AI-powered automation and insights.
+      </p>
      </div>
-     <!-- Enterprise Plan -->
-     <div class="bg-white rounded-lg shadow-md p-8 flex flex-col justify-between">
-      <div>
-       <h3 class="text-xl font-semibold text-gray-900 mb-4">
-        Enterprise
-       </h3>
-       <p class="text-4xl font-extrabold text-blue-600 mb-6">
-        Custom
-       </p>
-       <ul class="text-gray-700 space-y-3 mb-8">
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         All Pro Features
-        </li>
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         Dedicated Account Manager
-        </li>
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         Custom Integrations &amp; Solutions
-        </li>
-        <li>
-         <i class="fas fa-check text-blue-600 mr-2">
-         </i>
-         24/7 Premium Support
-        </li>
-       </ul>
-      </div>
-      <a class="block text-center bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition" href="#">
-       Subscribe
-      </a>
+     <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-900 shadow-md hover:shadow-lg transition">
+      <img alt="Icon representing cross-industry solutions with retail, logistics, and fintech symbols in purple" class="mb-6 w-24 h-24" draggable="false" height="96" src="https://storage.googleapis.com/a1aa/image/3bdcd64a-a412-409c-c4df-1ff5eaed2aec.jpg" width="96"/>
+      <h3 class="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">
+       Cross-industry solutions
+      </h3>
+      <p class="text-gray-700 dark:text-gray-300 max-w-xs">
+       Tailored AI tools for retail, logistics, fintech, and more — empowering diverse sectors to innovate faster.
+      </p>
      </div>
     </div>
-   </div>
-  </section>
-  <!-- About Section -->
-  <section aria-label="About Makrhub section with company vision and team photos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="about">
-   <h2 class="text-3xl font-extrabold text-blue-700 text-center">
-    About Makrhub
-   </h2>
-   <p class="mt-6 max-w-3xl mx-auto text-center text-gray-700 text-lg leading-relaxed">
-    At Makrhub, our vision is to revolutionize the way businesses operate by
-      harnessing the power of AI and cloud computing. We are committed to
-      delivering innovative, customizable, and seamless AI solutions that
-      empower companies across industries to enhance efficiency, customer
-      engagement, and growth.
-   </p>
-   <div class="mt-12 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
-    <div class="flex flex-col items-center">
-     <img alt="Portrait photo placeholder of team member 1, smiling professional with blue background" class="rounded-full w-28 h-28 object-cover" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dcaec8a9-d8f0-46bb-062f-0f344c6ef014.jpg" width="120"/>
-     <p class="mt-3 font-semibold text-gray-900">
-      Alice Johnson
-     </p>
-     <p class="text-sm text-gray-600">
-      CEO
-     </p>
+   </section>
+   <!-- Use Cases -->
+   <section class="bg-indigo-50 dark:bg-indigo-900 py-20" id="usecases">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+     <h2 class="text-3xl font-extrabold text-center text-indigo-900 dark:text-indigo-300 mb-16">
+      Use Cases
+     </h2>
+     <div class="space-y-16 max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-12">
+       <img alt="Customer support agent interacting with AI chatbot on computer screen in a modern office" class="rounded-2xl shadow-lg w-full md:w-1/2 mb-6 md:mb-0" draggable="false" height="200" src="https://storage.googleapis.com/a1aa/image/2d419419-46fb-43bc-4333-ffe4cafb34e6.jpg" width="320"/>
+       <div class="md:w-1/2">
+        <h3 class="text-2xl font-semibold text-indigo-900 dark:text-indigo-300 mb-4">
+         Customer Support Automation
+        </h3>
+        <p class="text-indigo-900 dark:text-indigo-200 leading-relaxed">
+         Automate responses, ticket routing, and customer interactions with AI-powered chatbots and smart workflows, reducing wait times and improving satisfaction.
+        </p>
+       </div>
+      </div>
+      <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-12 md:flex-row-reverse">
+       <img alt="Team collaborating around a table with AI-powered workflow dashboard on a large screen" class="rounded-2xl shadow-lg w-full md:w-1/2 mb-6 md:mb-0" draggable="false" height="200" src="https://storage.googleapis.com/a1aa/image/7940f781-8a1c-42bd-1c7d-ddf22cbc5bab.jpg" width="320"/>
+       <div class="md:w-1/2">
+        <h3 class="text-2xl font-semibold text-indigo-900 dark:text-indigo-300 mb-4">
+         Workflow Optimization for Teams
+        </h3>
+        <p class="text-indigo-900 dark:text-indigo-200 leading-relaxed">
+         Streamline operations with AI-driven task automation, analytics, and integrations that help teams focus on what matters most.
+        </p>
+       </div>
+      </div>
+      <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-12">
+       <img alt="Small business owner using a laptop with custom AI toolkits dashboard on screen" class="rounded-2xl shadow-lg w-full md:w-1/2 mb-6 md:mb-0" draggable="false" height="200" src="https://storage.googleapis.com/a1aa/image/1508483e-4f2c-4dbb-87ef-fededbf83aea.jpg" width="320"/>
+       <div class="md:w-1/2">
+        <h3 class="text-2xl font-semibold text-indigo-900 dark:text-indigo-300 mb-4">
+         Custom AI Toolkits for SMEs
+        </h3>
+        <p class="text-indigo-900 dark:text-indigo-200 leading-relaxed">
+         Empower small and medium enterprises with tailored AI solutions that fit their unique needs without heavy development overhead.
+        </p>
+       </div>
+      </div>
+     </div>
     </div>
-    <div class="flex flex-col items-center">
-     <img alt="Portrait photo placeholder of team member 2, confident professional with light blue background" class="rounded-full w-28 h-28 object-cover" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8eae085c-97d8-4ee1-0b11-d5eb17c15c22.jpg" width="120"/>
-     <p class="mt-3 font-semibold text-gray-900">
-      Michael Lee
-     </p>
-     <p class="text-sm text-gray-600">
-      CTO
-     </p>
+   </section>
+   <!-- Why Makrhub -->
+   <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20" id="about">
+    <h2 class="text-3xl font-extrabold text-center text-gray-900 dark:text-gray-100 mb-12">
+     Why Makrhub
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-5xl mx-auto">
+     <div class="p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-900 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
+      <i class="fas fa-code-branch text-indigo-600 dark:text-indigo-400 text-5xl mb-6">
+      </i>
+      <h3 class="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">
+       No-code/low-code AI tools
+      </h3>
+      <p class="text-gray-700 dark:text-gray-300 max-w-xs">
+       Build and deploy AI solutions without writing complex code — empowering all team members to innovate.
+      </p>
+     </div>
+     <div class="p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-900 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
+      <i class="fas fa-bolt text-indigo-600 dark:text-indigo-400 text-5xl mb-6">
+      </i>
+      <h3 class="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">
+       Fast integration
+      </h3>
+      <p class="text-gray-700 dark:text-gray-300 max-w-xs">
+       Connect Makrhub quickly to your existing infrastructure with our plug-and-play APIs and modular architecture.
+      </p>
+     </div>
+     <div class="p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-900 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
+      <i class="fas fa-cloud text-indigo-600 dark:text-indigo-400 text-5xl mb-6">
+      </i>
+      <h3 class="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">
+       Scalable with any cloud provider
+      </h3>
+      <p class="text-gray-700 dark:text-gray-300 max-w-xs">
+       Designed to grow with your business, Makrhub works seamlessly across all major cloud platforms.
+      </p>
+     </div>
     </div>
-    <div class="flex flex-col items-center">
-     <img alt="Portrait photo placeholder of team member 3, friendly professional with white background" class="rounded-full w-28 h-28 object-cover" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b6610bbe-16f8-49f2-dd29-bc60fc6106e5.jpg" width="120"/>
-     <p class="mt-3 font-semibold text-gray-900">
-      Sara Kim
+   </section>
+   <!-- Founders' Section -->
+   <section class="bg-indigo-50 dark:bg-indigo-900 py-20" id="founders">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+     <h2 class="text-3xl font-extrabold text-indigo-900 dark:text-indigo-300 mb-12">
+      Meet the Creators
+     </h2>
+     <p class="max-w-3xl mx-auto text-indigo-900 dark:text-indigo-200 mb-16 text-lg leading-relaxed">
+      Makrhub was developed by visionary founders
+      <strong>
+       ShankarS
+      </strong>
+      and
+      <strong>
+       RamyaK
+      </strong>
+      , combining expertise in AI and cloud technologies to empower businesses worldwide.
      </p>
-     <p class="text-sm text-gray-600">
-      Head of AI Research
-     </p>
+     <div class="flex flex-col sm:flex-row justify-center gap-12 max-w-4xl mx-auto">
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-8 flex flex-col items-center max-w-xs mx-auto">
+       <img alt="Portrait of ShankarS, male AI and cloud technology expert, smiling with a modern office background" class="rounded-full mb-6 w-32 h-32 object-cover" draggable="false" height="128" src="https://storage.googleapis.com/a1aa/image/3d032813-a109-41bf-d048-990903c1ebeb.jpg" width="128"/>
+       <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
+        ShankarS
+       </h3>
+       <p class="text-gray-700 dark:text-gray-300 mb-4">
+        AI Architect &amp; Cloud Specialist
+       </p>
+       <blockquote class="italic text-indigo-600 dark:text-indigo-400 text-center max-w-xs">
+        “Our mission is to make AI accessible and scalable for every business, no matter the size or sector.”
+       </blockquote>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-8 flex flex-col items-center max-w-xs mx-auto">
+       <img alt="Portrait of RamyaK, female AI and cloud technology expert, smiling with a modern office background" class="rounded-full mb-6 w-32 h-32 object-cover" draggable="false" height="128" src="https://storage.googleapis.com/a1aa/image/f0c4c378-1854-4859-7448-346ce091444c.jpg" width="128"/>
+       <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
+        RamyaK
+       </h3>
+       <p class="text-gray-700 dark:text-gray-300 mb-4">
+        Product Lead &amp; AI Innovator
+       </p>
+       <blockquote class="italic text-indigo-600 dark:text-indigo-400 text-center max-w-xs">
+        “We believe in empowering teams with tools that simplify complexity and unlock creativity.”
+       </blockquote>
+      </div>
+     </div>
     </div>
-    <div class="flex flex-col items-center">
-     <img alt="Portrait photo placeholder of team member 4, smiling professional with gray background" class="rounded-full w-28 h-28 object-cover" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9a7c8bce-7fa2-4ef3-9ddf-921b71679708.jpg" width="120"/>
-     <p class="mt-3 font-semibold text-gray-900">
-      David Martinez
-     </p>
-     <p class="text-sm text-gray-600">
-      Lead Developer
-     </p>
-    </div>
-   </div>
-  </section>
-  <!-- Contact Section -->
-  <section aria-label="Contact section with form and social media icons" class="bg-blue-50 py-16 px-4 sm:px-6 lg:px-8" id="contact">
-   <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl font-extrabold text-blue-700 text-center">
+   </section>
+   <!-- Contact Section (Footer anchor) -->
+   <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20" id="contact">
+    <h2 class="text-3xl font-extrabold text-center text-gray-900 dark:text-gray-100 mb-8">
      Get in Touch
     </h2>
-    <form action="#" class="mt-8 space-y-6" method="POST" novalidate="">
+    <form action="#" class="max-w-3xl mx-auto space-y-6" method="POST" novalidate="">
      <div>
-      <label class="block text-gray-700 font-semibold mb-2" for="name">
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="name">
        Name
       </label>
-      <input class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+      <input class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition" id="name" name="name" placeholder="Your full name" required="" type="text"/>
      </div>
      <div>
-      <label class="block text-gray-700 font-semibold mb-2" for="email">
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="email">
        Email
       </label>
-      <input class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+      <input class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
      </div>
      <div>
-      <label class="block text-gray-700 font-semibold mb-2" for="message">
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="message">
        Message
       </label>
-      <textarea class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" id="message" name="message" placeholder="Write your message here..." required="" rows="4"></textarea>
+      <textarea class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition" id="message" name="message" placeholder="Write your message here..." required="" rows="4"></textarea>
      </div>
-     <div>
-      <button class="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition" type="submit">
-       Submit
+     <div class="text-center">
+      <button class="inline-flex items-center justify-center rounded-full bg-indigo-600 text-white font-semibold px-8 py-3 hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-400 transition" type="submit">
+       Send Message
       </button>
      </div>
     </form>
-    <div class="mt-10 flex justify-center space-x-8 text-blue-600 text-2xl">
-     <a aria-label="Facebook" class="hover:text-blue-800 transition" href="#">
-      <i class="fab fa-facebook-square">
-      </i>
-     </a>
-     <a aria-label="Twitter" class="hover:text-blue-400 transition" href="#">
-      <i class="fab fa-twitter-square">
-      </i>
-     </a>
-     <a aria-label="LinkedIn" class="hover:text-blue-700 transition" href="#">
-      <i class="fab fa-linkedin">
-      </i>
-     </a>
-     <a aria-label="Instagram" class="hover:text-pink-600 transition" href="#">
-      <i class="fab fa-instagram-square">
-      </i>
-     </a>
-    </div>
-   </div>
-  </section>
+   </section>
+  </main>
   <!-- Footer -->
-  <footer class="bg-white border-t border-gray-200">
-   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
-    <div class="flex space-x-6 mb-4 md:mb-0">
-     <a class="hover:text-blue-600 transition-colors duration-200 font-semibold" href="#">
+  <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+    <div class="flex space-x-6 text-gray-600 dark:text-gray-400 text-sm font-medium">
+     <a class="hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#privacy">
       Privacy Policy
      </a>
-     <a class="hover:text-blue-600 transition-colors duration-200 font-semibold" href="#">
-      Terms of Service
+     <a class="hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="#contact">
+      Contact
      </a>
     </div>
-    <p class="text-center md:text-right">
-     © 2024 Makrhub. All rights reserved.
+    <div class="flex space-x-6 text-gray-600 dark:text-gray-400 text-lg">
+     <a aria-label="Twitter" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="https://twitter.com/makrhub" rel="noopener" target="_blank">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a aria-label="LinkedIn" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition" href="https://linkedin.com/company/makrhub" rel="noopener" target="_blank">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+    </div>
+    <p class="text-gray-500 dark:text-gray-400 text-sm select-none">
+     © 2025 Makrhub
     </p>
    </div>
   </footer>
   <script>
-   const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+   const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
 
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
     });
+
+    // Dark mode toggle based on system preference
+    if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      document.documentElement.classList.add('dark');
+    }
   </script>
  </body>
 </html>
